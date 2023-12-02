@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   lint:
     name: Lint
-    uses: ./.github/workflows/include/lint.yml
+    uses: ./.github/workflows/lint.yml
     permissions:
       packages: read
 
