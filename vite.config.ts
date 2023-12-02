@@ -5,7 +5,7 @@ import million from "million/compiler";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-    plugins: [million.vite({mode: 'preact', auto: true}), preact(), tsconfigPaths()],
+  plugins: [million.vite({mode: 'preact', auto: true}), preact(), tsconfigPaths()],
 
-    publicDir: './node_modules/@brewen-dev/assets/lib',
+  publicDir: "node_modules/@brewen-dev/assets/lib",
 });
