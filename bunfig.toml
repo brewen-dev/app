@@ -1,4 +1,4 @@
 telemetry = false
 
 [install.scopes]
-"@brewen-dev" = { username = "$GH_USERNAME", password = "$GH_TOKEN", url = "https://npm.pkg.github.com" }
+"@brewen-dev" = { token = "$GH_TOKEN", url = "https://npm.pkg.github.com" }
