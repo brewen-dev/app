@@ -11,20 +11,23 @@
     "release": "bun x standard-version",
     "dev": "bun --bun x vite",
     "build": "bun --bun x vite build",
-    "lint": "bun --bun x eslint 'app/**/*.ts{,x}'",
-    "stylelint": "bun --bun x stylelint 'app/**/*.scss'",
-    "commitlint": "bun --bun x commitlint --edit"
+    "lint": "bun --bun x eslint 'src/**/*.ts{,x}'",
+    "stylelint": "bun --bun x stylelint 'src/**/*.scss'",
+    "commitlint": "bun --bun x commitlint --edit",
+    "format": "bun --bun x prettier --write 'src/**/*.ts{,x}'"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.2",
     "@commitlint/config-conventional": "^18.4.2",
-    "@remix-run/dev": "^2.3.1",
-    "@remix-run/eslint-config": "^2.3.1",
+    "@preact/preset-vite": "^2.7.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
     "sass": "~1.69.5",
     "semantic-release": "^22.0.8",
     "stylelint": "^15.11.0",
@@ -34,12 +37,13 @@
     "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {
-    "@remix-run/node": "^2.3.1",
-    "@remix-run/react": "^2.3.1",
-    "@remix-run/serve": "^2.3.1",
-    "isbot": "^3.7.1",
+    "@brewen-dev/assets": "^1.0.0",
+    "@brewen-dev/style": "^1.0.0",
     "million": "^2.6.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "preact": "^10.19.2",
+    "preact-iso": "^2.3.2",
+    "preact-render-to-string": "^6.3.1",
+    "react": "npm:@preact/compat",
+    "react-dom": "npm:@preact/compat"
   }
 }

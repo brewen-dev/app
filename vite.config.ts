@@ -1,9 +1,11 @@
 import {defineConfig} from "vite";
 
-import {unstable_vitePlugin as remix} from "@remix-run/dev";
+import preact from "@preact/preset-vite";
 import million from "million/compiler";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-    plugins: [million.vite({auto: true}), remix(), tsconfigPaths()],
+    plugins: [million.vite({mode: 'preact', auto: true}), preact(), tsconfigPaths()],
+
+    publicDir: './node_modules/@brewen-dev/assets/lib',
 });
